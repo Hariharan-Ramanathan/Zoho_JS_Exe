@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="galleryBar">
+    <button class="arrow before">⇦</button>
+    <div class="gallery">
+        <ul>
+            <img src="https://en.js.cx/carousel/2.png">
+            <img src="https://en.js.cx/carousel/1.png">
+            <img src="https://en.js.cx/carousel/4.png">
+            <img src="https://en.js.cx/carousel/5.png">
+            <img src="https://en.js.cx/carousel/6.png">
+            <img src="https://en.js.cx/carousel/7.png">
+            <img src="https://en.js.cx/carousel/8.png">
+            <img src="https://en.js.cx/carousel/9.png">
+            <img src="https://en.js.cx/carousel/10.png">
+            <img src="https://en.js.cx/carousel/3.png">
+        </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+</div>
+<!-- <div class="bar">
+    
+    <div>
+  <ul>
+    
+  </ul>
+
+</div> -->
+
+
+  <script>
+      let img = document.querySelector('.gallery');
+      console.log(img);
+      document.querySelector('.next').addEventListener('click', ()=>{
+          img.scrollBy(0, 135);
+        //   img.style.marginTop+=10+'px';
+      })
+      document.querySelector('.before').addEventListener('click', ()=>{
+          img.scrollBy(0, -135);
+      })
+    // label the images to visually track them, just for convenience,
+    // // this code can be removed
+    // let i = 1;
+    // for(let li of carousel.querySelectorAll('li')) {
+    //   li.style.position = 'relative';
+    //   li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+    //   i++;
+    // }
+    // console.log(carousel)
+    // // ...your code to make carousel alive!
+
+  </script>
+
+</body>
+</html>

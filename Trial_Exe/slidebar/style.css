@@ -1,0 +1,31 @@
+ .galleryBar{
+    padding: 10px;
+    height: 200px;
+    width: 500px; 
+    background-color: rgb(43, 38, 38);
+    border-radius: 40px;
+    
+ }
+.gallery{
+    margin-top: 30px;
+    height: 150px;
+    overflow: hidden;
+    transition: all 1s;
+
+}
+.arrow{
+    position: absolute;
+    border-radius: 50px;
+    top: 100px;
+    cursor: pointer;
+    display: block; 
+} 
+
+.next{
+    left: 480px;
+}
+.before{
+    left: 15px;
+}
+
+

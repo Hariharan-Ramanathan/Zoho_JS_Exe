@@ -1,0 +1,16 @@
+table, th, td{
+    border : 1px solid black;
+}
+
+.notification{
+    top: 10;
+    right: 10;
+}
+
+.para{
+    width: 300px;
+    height: 200px;
+    overflow: scroll;
+    border: 25px solid #E8C48F;
+    padding: 20px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<li id="topic" style="cursor: pointer;">
+   Sweeties (click me)!
+</li>
+
+  <ul id="items">
+    <li>Cake</li>
+    <li>Donut</li>
+    <li>Honey</li>
+  </ul>
+
+</body>
+<script>
+
+    let item = document.querySelector('#items')
+    item.style.visibility = 'hidden';
+    document.querySelector('#topic').addEventListener('click', ()=>{
+        if(item.style.visibility === 'hidden')
+            item.style.visibility = '';
+        else
+            item.style.visibility = 'hidden';
+    })
+</script>
+</html>

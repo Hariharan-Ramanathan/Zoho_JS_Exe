@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #field {
+      width: 200px;
+      border: 10px groove black;
+      background-color: #00FF00;
+      position: relative;
+    }
+
+    #ball {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="field">
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+<script>
+  let ele = document.querySelector('#field');
+  let height = getComputedStyle(ele).height;
+  let width = getComputedStyle(ele).width;
+
+  let pic = document.querySelector('#ball');
+  let pic_h = getComputedStyle(pic).height;
+  let pic_w = getComputedStyle(pic).width;
+  console.log(pic_h, pic_w);
+
+  document.getElementById('ball').style.left = Math.round(parseInt(width) )/2 + 'px';
+  document.getElementById('ball').style.top = Math.round(parseInt(height) )/ 2+ 'px';
+</script>
+
+</body>
+
+</html>
