@@ -1,0 +1,1 @@
+1. Get Details like Browser Name , Browser Version , Screen Width , Screen Height. Create a table dynamically with four rows and two columns . One Column should contain the Parameter (Say , Browser Name etc..) and the other one should contain the value (Say , Internet Explorer). Refer Note for how the output should look.

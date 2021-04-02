@@ -1,0 +1,1 @@
+8. Use Sprite Image to create separate images. Create a page displaying the sprite image , and text boxes to get values for row , column. According to the entry for the row and the column display the destined image. When row/column alone is given display all the images in that row/column. The width and height of individual image is 75 and 53 respectively. 
