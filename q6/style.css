@@ -1,0 +1,14 @@
+#i1{
+    /* margin-left:5%; */
+    transition: all 1s;
+    position: absolute;
+    top: 100px;
+    /* left: 10px; */
+}
+
+.btn{
+    padding: 10px;
+    width: 130px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
