@@ -1,0 +1,27 @@
+body { margin:0; padding:0;}
+.toolbar_main { margin:0 auto; width:800px; height:7	0px; background-color:#f5f5f5; }/******** tool bar Total main div ***********/
+
+.toolbarmenupart { margin:0; margin-top:20px; padding:0; float:left; height:17px; overflow: hidden;}/******** tool bar Top menu main div ***********/
+.toolbarmenupart_lft { margin:3px 0 0 300px; padding:1px 0 0 0; width:150px; height:17px; font: bold 11px Verdana, Arial, Helvetica, sans-serif; color:#fff;  float:left; color:#666666; text-align:center; background:url(spiteimg.gif) no-repeat -362px -36px; cursor:pointer; display:inline;}
+.toolbarmenupart_rht { margin:0 27px 0 0px;  padding:0; height:17px; width:323px; font:11px Verdana, Arial, Helvetica, sans-serif; color:#fff; float:left;}
+.toolbarmenupart_rht span { float:right;}/******** tool bar menu Button Right side align Span Tag ***********/
+.Leftmenu_arrow {border:none;float:left; height:17px; background:url(spiteimg.gif) no-repeat -352px -4px; font:normal 11px Arial, Helvetica, sans-serif; color:#1a1919; cursor:pointer; }
+.Menubutton_rht{ border:none; text-align:center; background:url(menuimg.gif) no-repeat top right; font:normal 11px Arial, Helvetica, sans-serif; vertical-align:top; color:#474646; height:17px; margin:0; padding:0 4px 0 0; cursor:pointer; }
+.Menubutton_lft{ border:none; margin:0; padding:0 0 0 7px; text-align:center; color:#474646; font:normal 11px Arial, Helvetica, sans-serif; background:url(menuimg.gif) no-repeat left bottom; vertical-align:top; height:17px; cursor:pointer;}
+.Rightmenu_arrow  { border:none;height:17px; width:17px;  background:url(spiteimg.gif) no-repeat -377px -4px; position:relative; left:-4px; margin:0; padding:0; cursor:pointer;}		/******** tool bar Top menu main div End ***********/
+
+.Toolbarlist  { margin:0; padding:0; margin-top:0; height:40px; clear:left; width:800px;}/******** Toolbarlist  main div start ***********/
+.Toolbarlist_lft { margin:0; padding:0; height:30px; float:left; width:50px; background:url(spiteimg.gif) no-repeat -233px -4px; }
+.Toolbarlist_lft input { border:none; margin:8px 0 0 6px; padding:0; text-align:right; font:normal 11px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -2px -4px; vertical-align:top;  height:17px; width:18px;}
+.Toolbarlist_lft .preview { border:none; margin:8px 0 0 5px; padding:0; font:normal 11px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -23px -4px; height:16px; width:14px;}
+.Toolbarlist_mid { margin:0; padding:0; height:30px; background:url(center_bg.gif) repeat-x 0 0 ;float:left; width:700px;}
+.Toolbarlist_mid input { border:none; margin:0; padding:0; color:#FFFFFF;font:normal 11px Arial, Helvetica, sans-serif; background:url(toolbar_bg.gif) repeat-x 0px 0px; vertical-align:top; padding:0; margin:12px 0 0 0; height:10px; width:700px; overflow:hidden; cursor: pointer;}
+.Toolbarlist_rht { margin:0px; padding:0; height:30px; float:right; text-align:right; width:50px; background:url(spiteimg.gif) no-repeat -294px -4px;}
+.Toolbarlist_rht input { border:none; margin:8px 0 0 0; padding:0; font:normal 11px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -42px -4px; vertical-align:top; height:16px; width:14px;}
+.Toolbarlist_rht .area { border:none; margin:8px 6px 0 0; padding:0; font:normal 11px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -58px -4px; height:16px; width:18px;}
+
+
+					/******** toolbarmovebutton ***********/
+.toolbarbutton {  margin: 0 0 0 200px; padding:0px; height:38px; width:66px; position:absolute; top:40px; left:300px;}
+.toolbarbutton_lft{ border:none; margin:0px; padding:4px 0px 0px 0; color:#FFFFFF; font:bold 12px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -93px -3px; text-align:center; height:19px; width:66px; cursor:pointer;}
+.toolbarbutton_rht{  margin:0 0 0 0; padding:0 0 0 0; color:#FFFFFF; font:bold 11px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -164px -4px;  height:15px; width:66px; text-align:center; width:66px; cursor:pointer; vertical-align:top;}

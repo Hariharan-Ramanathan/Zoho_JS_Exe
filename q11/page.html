@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.puzzle {
+   background-image:url('eye.jpeg');
+   width:150px;
+   height:150px;
+   border-radius: 5px;
+   display: inline-block;
+}
+.piece1 {
+   background-position:-400px -100px;
+   margin: 2px;
+   cursor: pointer;
+
+}
+.piece2 {
+   background-position:-200px -100px;
+   margin: 2px;
+   cursor: pointer;
+   
+}
+.piece3 {
+   background-position:-400px -200px;
+   margin: 2px;
+   cursor: pointer;
+}.piece4 {
+   background-position: 0 -200px;
+   margin: 2px;
+   cursor: pointer;
+}.piece5 {
+   background-position:-200px -200px;
+   margin: 2px;
+   cursor: pointer;
+}.piece6 {
+   background-position:0 -100px;
+   margin: 2px;
+   cursor: pointer;
+}.piece7 {
+   background-position:0px -300px;
+   margin: 2px;
+   cursor: pointer;
+}
+.piece8 {
+   background-position:-200px -300px;
+   margin: 2px;
+   cursor: pointer;
+}
+.piece9 {
+   background-position:-400px -300px;
+   margin: 2px;
+   cursor: pointer;
+}
+#puzzle{
+    margin-top: -150px;
+}
+
+.selected{
+    border: 3px solid red;
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="puzzle" style="margin-left:50%;"> <img id='imgs' style="position:absolute;border-radius : 20px; height: 300px; width: 300px;" src="eye.jpeg" alt=""> </div>
+    <div id="puzzle">
+        <div>
+            <ul class="puzzle piece1"></ul>
+            <ul class="puzzle piece2"></ul>
+            <ul class="puzzle piece3"></ul>         
+        </div>
+        <div>
+            <ul class="puzzle piece4"></ul>
+            <ul class="puzzle piece5"></ul>
+            <ul class="puzzle piece6"></ul>
+    
+        </div>
+        <div>
+            <ul class="puzzle piece7"></ul>
+            <ul class="puzzle piece8"></ul>
+            <ul class="puzzle piece9"></ul>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let count = 0;
+    let pixel = document.querySelectorAll('.puzzle');
+    let arr = [{'x':'-400px',
+                 'y':'-100px'},
+                {'x':'-200px',
+                 'y':'-100px'},
+                 {'x':'-400px',       
+                 'y':'-200px'},
+                 
+                 {'x':'0',
+                 'y':'-200px'},
+                {'x':'-200px',
+                 'y':'-200px'},
+                 {'x':'0px',
+                 'y':'-100px'},
+                 
+                 {'x':'0',
+                 'y':'-300px'},
+                {'x':'-200px',
+                 'y':'-300px'},
+                 {'x':'-400px',
+                 'y':'-300px'},];
+
+    let swap_x = '';
+    let swap_y = '';
+    let index = '';
+    
+    for(let i=1;i<pixel.length;i++){
+        pixel[i].addEventListener('click',()=>{
+
+            if(!pixel[i].classList.contains('selected') && count < 2){
+                count++;
+                pixel[i].classList.add('selected');
+                if(swap_x && swap_y){
+                    console.log(swap_x, swap_y, arr[i-1]);
+                    document.querySelector(`.piece${i}`).style.backgroundPosition = `${swap_x} ${swap_y}`;
+                    document.querySelector(`.piece${index}`).style.backgroundPosition = `${arr[i-1].x} ${arr[i-1].y}`;
+                    [arr[i-1].x, arr[i-1].y] = [arr[index-1].x, arr[index-1].y];
+                    swap_x = '';
+                    swap_y = '';
+                    count = 0;
+                    pixel[i].classList.remove('selected');
+                    pixel[index].classList.remove('selected');  
+                }else{
+                    swap_x = arr[i-1].x;
+                    swap_y = arr[i-1].y;
+                    index = i;
+                }}
+            else{
+            if(pixel[i].classList.contains('selected')){
+                count--;
+                pixel[i].classList.remove('selected');  
+            }
+                
+            }
+            });
+    }
+
+</script>
+</html>
