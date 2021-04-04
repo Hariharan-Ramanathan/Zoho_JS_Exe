@@ -25,3 +25,4 @@ body { margin:0; padding:0;}
 .toolbarbutton {  margin: 0 0 0 200px; padding:0px; height:38px; width:66px; position:absolute; top:40px; left:300px;}
 .toolbarbutton_lft{ border:none; margin:0px; padding:4px 0px 0px 0; color:#FFFFFF; font:bold 12px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -93px -3px; text-align:center; height:19px; width:66px; cursor:pointer;}
 .toolbarbutton_rht{  margin:0 0 0 0; padding:0 0 0 0; color:#FFFFFF; font:bold 11px Arial, Helvetica, sans-serif; background:url(spiteimg.gif) no-repeat -164px -4px;  height:15px; width:66px; text-align:center; width:66px; cursor:pointer; vertical-align:top;}
+ 
