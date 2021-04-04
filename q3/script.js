@@ -38,6 +38,10 @@ function enterInput(){
     fullName.value ='';
     DOB.value = '';
     Phone.value = '';
+    if(popUps.classList.contains('error')){
+        popUps.classList.remove('error');
+        popUps.innerHTML = '';
+    }
     console.log(entries);
 
 }
@@ -61,6 +65,23 @@ submit.onclick = function(e){
         popUps.innerHTML = 'Number length should be <= 10';
         focus(Phone);
     }else{
-        enterInput();
+        let d = /[^a-zA-Z]+/;
+        let sexVal = '';
+        let sex = document.getElementsByName('gender');
+
+        for(let i = 0;i<sex.length;i++)
+        if(sex[i].checked){
+            sexVal = sex[i].id;
+            // console.log(sex[i].id)
+        }
+        if(!fullName.value.match(d) && sexVal){
+            // alert('no error');
+            enterInput();
+        }
+        else{
+            // alert('error error');
+            popUps.classList.add('error');
+            popUps.innerHTML = 'Invalid Input or not given input';
+        }
         }
 }
