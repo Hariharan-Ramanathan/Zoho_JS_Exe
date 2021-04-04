@@ -1,35 +1,37 @@
 body{
-    padding: 30px;
+    padding-top: 5%;
+    padding-left: 15%;
 }
 .images{
-    height: 200px;
-    width: 400px;
+    height: 100px;
+    width: 200px;
     border: 1px solid black;
     cursor: pointer;
     margin-left: 10px;
     margin-top: 10px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 20px;
     text-align: center;
 }
 
 .slideShow{
-    margin-left: 600px;
+    margin-left: 30%;
     margin-top: 100px;
-    height: 100px;
+    height: 70px;
     width: 300px;
+    border-radius: 30px !important;
 }
 
 .popUp{
     height: 700px;
     width: 1200px;
     position: relative;
-    margin-top: -300px;
-    margin-left: 200px;
+    margin-top: -70px;
+    /* margin-left: 50px; */
     border: 1px solid black;
     border-radius: 40px;
     cursor: pointer;
-    background-color: black;
+    background-color: rgba(27, 26, 26, 0.719);
     transition: all 1s;
 }
 .insideImage{
@@ -38,5 +40,4 @@ body{
     border-radius: 40px;
     margin-left: 100px;
     margin-top: 90px;
-  
 }

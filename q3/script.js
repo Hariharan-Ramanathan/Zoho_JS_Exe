@@ -31,8 +31,9 @@ function enterInput(){
             sex[i].checked = !sex[i].checked
             // console.log(sex[i].id)
         }
-    entry.innerHTML= `<ul>Name : ${fullName.value}</ul><ul>DOB :${DOB.value}</ul><ul>Sex : ${sexVal}</ul><ul>Phone Number :${Phone.value}</ul>`;
-    entry.style.cssText = 'margin-top : 30px'
+    entry.innerHTML= `<ul>Name : ${fullName.value}</ul><ul>DOB :${DOB.value}</ul><ul>Sex : ${sexVal}</ul><ul>Phone Number :${Phone.value}</ul><button class='close btn btn-danger '>Close me</button>`;
+    entry.style.cssText = 'margin-top : 30px';
+    entry.style.position = 'relative';
     entry.classList.add('inputForm');
     entries.appendChild(entry);
     fullName.value ='';
@@ -84,4 +85,13 @@ submit.onclick = function(e){
             popUps.innerHTML = 'Invalid Input or not given input';
         }
         }
+}
+
+entries.onclick = (e)=>{
+    console.log(e.target.className);
+    if(e.target.className.match('close')){
+        let myTag = e.target.closest('.inputForm');
+        myTag.remove();
+        console.log('emtered');
+    }
 }

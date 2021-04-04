@@ -30,7 +30,7 @@ for(let i=0;i<img.length;i++){
     let thumbnail = document.createElement('IMG');
     thumbnail.setAttribute('src',img[i].link);
     thumbnail.setAttribute('oncontextmenu','return false;');
-    thumbnail.classList.add('images');
+    thumbnail.classList.add('image');
     let btn = '';
     thumbnail.addEventListener('click', (e)=>{
         orgName.innerHTML=img[i].name;

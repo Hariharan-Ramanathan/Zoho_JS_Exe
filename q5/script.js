@@ -47,10 +47,9 @@ startSlide.onclick = (e)=>{
     openPopUp.classList.add('popUp');
     i = 0;
     bigPic.setAttribute('src', img[i].link);
-
-
+    openPopUp.innerHTML+= '<button class="close btn btn-danger">Close me</button>';
     bigPic.classList.add('insideImage');
-    openPopUp.addEventListener('click', forward);
+    bigPic.addEventListener('click', forward);
     openPopUp.addEventListener('contextmenu', (e)=>{
         e.preventDefault();
         if(i >= 5)
@@ -64,5 +63,19 @@ startSlide.onclick = (e)=>{
 
 }
 
+openPopUp.onclick = (e)=>{
+    if(e.target.className.match('close')){
+        let myTag = document.querySelector('#bigPic');
+        myTag.setAttribute('src','');
+        if(myTag.classList.contains('popUp'))
+            myTag.classList.remove('popUp');
+        myTag.classList.remove('insideImage');
+        let parent  = e.target.closest('.popUp');
+        parent.classList.remove('popUp');
+        let btn = document.querySelector('.close');
+        btn.remove();
+        console.log(myTag);
+    }
+}
 
 
