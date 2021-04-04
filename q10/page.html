@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+.left{
+    position: relative;
+    margin-left: 400px;
+    margin-top: -100px;
+}
+.right{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 1000px;
+}
+img{
+    width: 100px;
+}
+#me{
+    margin-left: 700px;
+}
+/* div{
+    position: relative;
+} */
+.l3{
+    top: 0px;
+    position: relative;
+    animation: moveL 3s; 
+    animation-fill-mode:forwards;
+}
+.r5{
+    top: 0px;
+    position: relative;
+    animation: moveR 3s;
+    animation-fill-mode:forwards;
+
+} 
+/* .l1{
+    position: relative;
+    animation-iteration-count: 5;
+    animation: moveDL 1s;
+    animation-fill-mode:forwards;
+} */
+/* .r1{
+    position: relative;
+    animation: moveDL 1s;
+    animation-fill-mode: forwards;
+}
+ */
+@keyframes moveR{
+    from{margin-left: 1000px;}
+    to{margin-left: 1400px;}
+}
+@keyframes moveL {
+  from {margin-left: 400px;}
+  to {margin-left: 0px;}
+}
+
+
+.table{
+    position: absolute;
+    margin-top:10px;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="me"><img src="teddy.jpeg" alt=""></div>
+    <div class="right r1"><img src="teddy.jpeg" alt=""></div>
+    <div class="right r2"><img src="teddy.jpeg" alt=""></div>
+    <div class="right r3"><img src="teddy.jpeg" alt=""></div>
+    <div class="left l1"><img src="teddy.jpeg" alt=""></div><div class="right r4"><img src="teddy.jpeg" alt=""></div>
+    <div class="left l2"><img src="teddy.jpeg" alt=""></div><div class="right r5"><img src="teddy.jpeg" alt=""></div>
+    <div class="left l3"><img src="teddy.jpeg" alt=""></div>
+    <!-- <div class="table">-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>   -->
+</body>
+<script>
+    
+    let l = 3;
+    let r = 5;
+    let lBuf = 0;
+    let rBuf = 0;
+    let cBuf = 0;
+
+    function moveSide(v, limit, moveClass){
+        let nxt = document.querySelector(`.${v}${limit}`).classList.add(moveClass);
+    }
+
+    function moveAllDown(v, limit, buf, moveClass){
+        for(let i=1;i<=limit;i++){
+            let val = document.querySelector(`.${v}${i}`).style.top = buf + 'px';
+            console.log(val);  
+        }
+    }
+    function moveAllDownWrap(callback){
+        callback(arguments[1], arguments[2], arguments[3], arguments[4]);
+    }
+
+    for(let i=1;i<4;i++){   
+            let lEle = document.querySelector(`.l${i}`);
+            lEle.addEventListener('animationend',()=>{
+            lEle.remove();
+            l--;
+            lBuf+=100;
+            if(l>0){
+                moveAllDown('l', l, lBuf , 'l3');
+                setTimeout(moveSide, 1000,'l', l, 'l3');
+            }
+        });
+    }
+    for(let i=1;i<6;i++){   
+            let rEle = document.querySelector(`.r${i}`);
+            rEle.addEventListener('animationend',()=>{
+            rEle.remove();
+            r--;
+            rBuf+=100;
+            if(r > 0){
+                moveAllDown( 'r', r, rBuf, 'r5');
+                moveSide('r', r, 'r5');
+            }   
+        });
+    }
+            
+</script>
+</html>
