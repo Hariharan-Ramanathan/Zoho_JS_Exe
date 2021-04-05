@@ -85,5 +85,5 @@ if(y > 100 && goUp && !allow){
 
 function timer(){
 disp();
-my_time=setTimeout('timer()',10);
+my_time=setTimeout(timer,10);
 }
